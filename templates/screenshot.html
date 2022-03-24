@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body>
+<h2>Messages</h2>
+<form method="post" action="/add_message">
+    <input type="text" name="url">
+    <button type="submit">Input url</button>
+</form>
+
+<h3>Task ID</h3>
+{% for message in messages %}
+<div>&nbsp;<b>#task id = {{ message }}<b></div>
+{% endfor %}
+</body>
+</html>
